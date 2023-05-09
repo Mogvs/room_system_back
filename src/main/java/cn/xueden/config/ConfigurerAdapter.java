@@ -45,6 +45,8 @@ public class ConfigurerAdapter implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
        String pathUrl = "file:"+userIcon.replace("\\","/");
-       registry.addResourceHandler("/uploadFile/**").addResourceLocations(pathUrl).setCachePeriod(0);
+        registry.addResourceHandler("/uploadFile/**").addResourceLocations(pathUrl).setCachePeriod(0);
+        registry.addResourceHandler("/swagger-ui/**")
+                .addResourceLocations("classpath:/META-INF/resources/webjars/springfox-swagger-ui/");
     }
 }

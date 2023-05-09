@@ -1,7 +1,9 @@
 package cn.xueden.hotel.domain.service.impl;
 
 import cn.xueden.hotel.domain.entity.HotelRoomType;
+import cn.xueden.hotel.domain.mapper.HotelRoomTypeMapper;
 import cn.xueden.hotel.domain.service.IHotelRoomTypeService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +16,6 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Service
 @Transactional(readOnly = true)
-public class HotelRoomTypeServiceimpl implements IHotelRoomTypeService {
+public class HotelRoomTypeServiceimpl extends ServiceImpl<HotelRoomTypeMapper,HotelRoomType> implements IHotelRoomTypeService {
 
 }
