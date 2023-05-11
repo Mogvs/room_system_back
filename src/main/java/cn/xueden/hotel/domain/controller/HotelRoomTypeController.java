@@ -38,7 +38,7 @@ public class HotelRoomTypeController {
     @ApiOperation(value="房间类型-添加", notes="房间类型-添加")
     @PostMapping("/add")
     public Result<?> add(@RequestBody HotelRoomType hotelRoomType){
-      //  hotelRoomTypeService.save(hotelRoomType);
+       hotelRoomTypeService.save(hotelRoomType);
        return  Result.ok("添加成功！");
     }
 
