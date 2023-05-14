@@ -32,7 +32,6 @@ public class HotelRoomTypeController {
 
     @Autowired
     private IHotelRoomTypeService hotelRoomTypeService;
-    private Object QueryGenerator;
 
     /**
      *   添加
@@ -81,6 +80,7 @@ public class HotelRoomTypeController {
         if(StringUtils.isNotEmpty(typeName)){
             queryWrapper.lambda().like(HotelRoomType::getTypeName,typeName);
         }
+        queryWrapper.orderByAsc("length(TYPE_SORT),TYPE_SORT");
         Page<HotelRoomType> page=new Page<>(pageNo,pageSize);
         IPage<HotelRoomType> pageList=  hotelRoomTypeService.page(page,queryWrapper);
         return Result.ok(pageList);

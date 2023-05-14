@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.xueden.hotel.domain.mapper.HotelFloorMapper">
+    <!--    -->
+    <!--    <select id="findAdmGradeParamsBySection"  parameterType="java.lang.String" resultType="cn.one2rich.project.entity.AdmGradeParams">-->
+
+    <!--        SELECT * FROM ADM_GRADE_PARAMS WHERE GRADE_TYPE = #{gradCode} AND MIN_VAL &lt;= #{val} AND MAX_VAL &gt; #{val}-->
+
+    <!--    </select>-->
+</mapper>
