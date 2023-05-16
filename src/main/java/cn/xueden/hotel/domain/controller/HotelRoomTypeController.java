@@ -34,14 +34,14 @@ public class HotelRoomTypeController {
     private IHotelRoomTypeService hotelRoomTypeService;
 
     /**
-     *   添加
+     *   保存
      *
      * @param hotelRoomType
      * @return
      */
-    @AutoLog(description = "房间类型-添加")
-    @ApiOperation(value="房间类型-添加", notes="房间类型-添加")
-    @PostMapping("/add")
+    @AutoLog(description = "房间类型-保存")
+    @ApiOperation(value="房间类型-保存", notes="房间类型-保存")
+    @PostMapping("/save")
     public Result<?> add(@RequestBody HotelRoomType hotelRoomType){
         QueryWrapper<HotelRoomType> queryWrapper=new QueryWrapper<>();
         queryWrapper.lambda().eq(HotelRoomType::getTypeSort,hotelRoomType.getTypeSort());
@@ -59,7 +59,7 @@ public class HotelRoomTypeController {
                 return  Result.error("类型序号已存在");
             }
             hotelRoomTypeService.save(hotelRoomType);
-            return  Result.ok("添加成功！");
+            return  Result.ok("保存成功！");
         }
     }
     /**
